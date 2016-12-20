@@ -3,6 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import hard.Hard;
 import moderate.Board;
 import moderate.Color;
 import moderate.Line;
@@ -15,11 +16,9 @@ import moderate.PlankOfWood.PlankType;
 public class Main {
 
 	public static void main(String[] args) {
-		Moderate m = new Moderate();
+		Hard h = new Hard();
 		
-		
-		
-		System.out.println(m.calculator("2*3+5/6*3+15"));
+		System.out.println();
 	}
 
 }
