@@ -3,7 +3,9 @@ package hard;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -50,5 +52,22 @@ public class HardTests {
 		assertEquals(53, h.missingNumber(arrayEven));
 		assertEquals(152, h.missingNumber(arrayOdd));
 	}
+	
+	@Test
+	public void test_getLongestSubarray_function() {
+		char[] toTest = {'A','6','7','B','2','C','F','T','2','9','3','Y','Q'};
+		char[] expected = {'6','7','B','2','C','F','T','2','9','3','Y', 'Q'};
+		Assert.assertArrayEquals(expected, h.getLongestSubarray(toTest));
+	}
+	
+	@Test
+	public void test_countTwos_function() {
+		assertEquals(1, h.countTwos(5));
+		assertEquals(3, h.countTwos(20));
+		assertEquals(20, h.countTwos(100));
+		assertEquals(300, h.countTwos(1000));
+	}
+	
+	
 
 }
