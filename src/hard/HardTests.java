@@ -175,4 +175,63 @@ public class HardTests {
 		int[] appointments = {30, 15, 60, 75, 45, 15, 15, 45};
 		assertEquals(180, h.getOptimalSet(appointments));
 	}
+	
+	@Test
+	public void test_shortestSupersequence_function() {
+		int[] target = {1, 5, 9};
+		int[] array = {7, 5, 9, 0, 2, 1, 3, 5, 7, 9, 1, 1, 5, 8, 8, 9, 7};
+		
+		int[] expected = {7,10};
+		Assert.assertArrayEquals(expected, h.shortestSupersequence(target, array));
+	}
+	
+	@Test
+	public void test_findMissingTwo_function() {
+		int[] nums = {1,2,3,4,5,7,8,9,10,11,13,14,15,16,17};
+		int[] expected = {12,6};
+		Assert.assertArrayEquals(expected, h.findMissingTwo(nums));
+	}
+	
+	
+	@Test
+	public void test_getVolume_function() {
+		int[] array = {0,0,4,0,0,6,0,0,3,0,5,0,1,0,0,0};
+		assertEquals(26, h.getVolume(array));
+	}
+	
+	@Test
+	public void test_getVolumeOptimized_function() {
+		int[] array = {0,0,4,0,0,6,0,0,3,0,5,0,1,0,0,0};
+		assertEquals(26, h.getVolumeOptimized(array));
+	}
+	
+	@Test
+	public void test_maxBlackquare_function() {
+		int[][] matrix = {{0,1,0,1,0,1},
+						  {0,0,1,1,1,1},
+						  {0,0,1,0,1,1},
+						  {0,0,1,0,0,1},
+						  {0,0,1,1,1,1},
+						  {1,1,1,1,1,1}};
+		
+		int[][] expected = {{1,1,1,1},
+				  			{1,0,1,1},
+				  			{1,0,0,1},
+				  			{1,1,1,1}};
+		
+		Assert.assertArrayEquals(expected, h.maxBlackquare(matrix));
+	}
+	
+	@Test
+	public void test_maxSubmatrix_function() {
+		int[][] matrix = {{-10,20,100},
+				  		  {-20,100,10},
+				  		  {0,-50,-11}};
+		
+		int[][] expected = {{20,100},
+	  						{100,10}};
+		
+		Assert.assertArrayEquals(expected, h.maxSubmatrix(matrix));
+	}
+	
 }
