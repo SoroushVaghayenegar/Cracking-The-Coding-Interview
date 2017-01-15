@@ -2,6 +2,6 @@
 
 ## Chapters done:
 ```
-Moderate
-Hard
+### Moderate
+### Hard
 ```
